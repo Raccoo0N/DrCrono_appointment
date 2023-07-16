@@ -16,10 +16,8 @@
     ini_set("upload_max_filesize", "10M");
     ini_set("max_file_uploads", 3);
 
-    date_default_timezone_set('Europe/Moscow');
-    //header("Content-Type: text/html; charset=utf-8");
     header("Access-Control-Allow-Origin:*");
-    //header("Access-Control-Allow-Credentials=true"); 
+    header("Access-Control-Allow-Credentials=true"); 
 
     if( !isset( $_SESSION['token'] ) ){ 
         $filename = BASE_DIR ."token.json";
